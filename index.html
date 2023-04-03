@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/reset/reset.css" />
+    <link rel="stylesheet" href="./dist/styles/style.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Foundation&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./dist/js/script.min.js" defer></script>
+    <title>Admin panel</title>
+  </head>
+  <body>
+    <header class="header">
+      <section class="header-block">
+        <div class="loading">
+          <svg width="64px" height="48px">
+            <polyline
+              points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24"
+              id="back"
+            ></polyline>
+            <polyline
+              points="0.157 23.954, 14 23.954, 21.843 48, 43 0, 50 24, 64 24"
+              id="front"
+            ></polyline>
+          </svg>
+        </div>
+        <p class="header-block__title">Oxford Medical</p>
+      </section>
+      <div class="header-block__btn">Вхід</div>
+      <div class="header-block__btn-create">Створити візит</div>
+      <div id="login-modal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Для входу ведіть свій e-mail та пароль</h2>
+          <form>
+            <label for="username">e-mail:</label>
+            <input type="text" id="username" name="username" /><br />
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" /><br />
+            <button type="submit" id="login-button">Войти</button>
+          </form>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="filter">
+        <label for="search">Пошук:</label>
+        <input
+          type="text"
+          id="search"
+          name="search"
+          placeholder="Наберіть текст для пошуку"
+        />
+        <label for="status">Терміновість:</label>
+        <select id="status" name="status">
+          <option value="">Усі</option>
+          <option value="Звичайна">Звичайна</option>
+          <option value="Пріоритетна">Пріоритетна</option>
+          <option value="Невідкладна">Невідкладна</option>
+        </select>
+        <label for="priority">Лікарі:</label>
+        <select id="priority" name="priority">
+          <option value="">Усі</option>
+          <option value="Кардіолог">Кардіолог</option>
+          <option value="Терапевт">Терапевт</option>
+          <option value="Стоматолог">Стоматолог</option>
+        </select>
+      </div>
+      <section
+        class="main__users-card"
+        ondrop="drop(event, this)"
+        ondragover="dragOver(event)"
+      ></section>
+    </main>
+  </body>
+</html>

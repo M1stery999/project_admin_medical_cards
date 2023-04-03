@@ -1,0 +1,36 @@
+.filter {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: $filter-padding;
+    margin-bottom: $filter-margin;
+    border-radius: $filter-border-radius;
+    background-color: $filter-background-color;
+    max-width: 100%;
+    width: 75%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.filter label {
+    margin-right: 10px;
+}
+
+.filter input,
+.filter select {
+    padding: $filter-padding;
+    margin-bottom: $filter-margin;
+    border-radius: $filter-border-radius;
+    border: 1px solid #ccc;
+}
+
+.filter input[type="text"] {
+    width: 100%;
+    max-width: 300px;
+}
+
+.filter select {
+    width: 100%;
+    max-width: 200px;
+}

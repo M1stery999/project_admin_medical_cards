@@ -1,0 +1,192 @@
+.main__users-card {
+    display: flex;
+    float: left;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.users-card__block {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 30px;
+    min-height: 100px;
+}
+
+.users-card__block p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.users-card__block ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 16px;
+   
+}
+
+.users-card__block li {
+    margin-bottom: 5px;
+    
+}
+
+.users-card__block button {
+    background-color: rgba(0, 123, 255, 0.9);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    max-width: 170px;
+    align-self: center;
+}
+
+.users-card__block button:hover {
+    background-color: #0069d9;
+}
+
+.users-card__block .hidden-info {
+    display: none;
+}
+
+.users-card__block .show-more-btn {
+    display: block;
+}
+
+.users-card__block .edit-btn {
+    display: block;
+    margin-top: 10px;
+}
+
+.users-card__block .info-details {
+    margin-top: 10px;
+    display: none;
+}
+
+.users-card__block .info-details.show {
+    display: block;
+}
+
+.users-card__block .info-details input {
+    margin-bottom: 10px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.users-card__block .info-details button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.users-card__block .info-details button:hover {
+    background-color: #0069d9;
+}
+
+.users-card__block .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #ccc;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.users-card__block .close-btn:hover {
+    color: #000;
+}
+
+.users-card__full-info-list {
+    margin-top: 10px;
+}
+.users-card__full-info-list--hidden{
+    display: none;
+}
+.users-card__block {
+    align-items: inherit;
+}
+
+.users-card__edit-form {
+    display: none;
+    width: 100%;
+    max-width: 445px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.users-card__edit-form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.users-card__edit-form input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.users-card__block {
+    position: relative;
+}
+
+.users-card__delete-icon {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+}
+
+.users-card__delete-icon:before,
+.users-card__delete-icon:after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    top: 50%;
+    left: 0;
+    background-color: #ff0000;
+    transition: transform 0.3s;
+}
+
+.users-card__delete-icon:before {
+    transform: rotate(45deg);
+}
+
+.users-card__delete-icon:after {
+    transform: rotate(-45deg);
+}
+
+.users-card__delete-icon:hover:before {
+    transform: rotate(45deg) scale(1.1);
+}
+
+.users-card__delete-icon:hover:after {
+    transform: rotate(-45deg) scale(1.1);
+}
+
+.disable-events {
+    pointer-events: none;
+}

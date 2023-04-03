@@ -1,0 +1,78 @@
+body {
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-top: 20px;
+    background-image: url("/dist/images/back.png");
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.header-block {
+    display: flex;
+    align-items: center;
+    &__btn , &__btn-create {
+        display: flex;
+        border: 1px solid red;
+        border-radius: 20px;
+        width: 100px;
+        height: 35px;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: white;
+        cursor: pointer;
+        @include standart-font-text;
+        &:hover {
+            background-color: rgba(255, 0, 0, 0.8);
+            color: white;
+            transition: 0.7s;
+        }
+    }
+    &__btn-create {
+        display: none;
+        padding: 25px;
+        text-align: center;
+    }
+    &__title {
+        font-size: 25px;
+        margin-left: 15px;
+        color: rgba(255, 0, 0, 0.8);
+        @include standart-font-title;
+    }
+}
+
+.loading svg polyline {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.loading svg polyline#back {
+    fill: none;
+    stroke: #ff4d5033;
+}
+
+.loading svg polyline#front {
+    fill: none;
+    stroke: #ff4d4f;
+    stroke-dasharray: 48, 144;
+    stroke-dashoffset: 192;
+    animation: dash_682 1.4s linear infinite;
+}
+
+@keyframes dash_682 {
+    72.5% {
+        opacity: 0;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
