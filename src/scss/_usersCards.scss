@@ -4,6 +4,9 @@
     margin-top: 20px;
     flex-wrap: wrap;
     justify-content: center;
+    &--hidden {
+        display: none;
+    }
 }
 
 .users-card__block {

@@ -35,6 +35,9 @@ const signIn = () => {
             createBtn.style.display = "flex";
             localStorage.setItem("username", username);
             localStorage.setItem("password", password);
+            document
+              .querySelector(".main__users-card")
+              .classList.remove("main__users-card--hidden");
           } else {
             console.log("Login failed");
           }
@@ -48,6 +51,9 @@ const signIn = () => {
   if (storedUsername && storedPassword) {
     document.getElementById("username").value = storedUsername;
     document.getElementById("password").value = storedPassword;
+    document
+      .querySelector(".main__users-card")
+      .classList.remove("main__users-card--hidden");
     document.getElementById("login-button").click();
   }
 };
